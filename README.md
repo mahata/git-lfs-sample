@@ -24,3 +24,13 @@ At this stage, `.gitattributes` will contain the line:
 ```
 
 This line tells Git to use the LFS filter for files matching the pattern `*.jpg`. The `-text` option indicates that these files should not be treated as text files, which is important for binary files like images.
+
+When you push this repository to GitHub, the images will be stored in LFS. `git push` shows something like this:
+
+```text
+$ git push origin main
+Uploading LFS objects: 100% (7/7), 35 MB | 608 KB/s, done.
+...
+```
+
+On GitHub, Go `Settings (from top-right icon) => Billing and licensing => Overview`, and then There's `Git LFS` section which shows the usage of LFS.
